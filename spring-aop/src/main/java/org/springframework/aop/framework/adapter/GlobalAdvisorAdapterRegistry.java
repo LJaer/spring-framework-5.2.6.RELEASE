@@ -24,6 +24,8 @@ package org.springframework.aop.framework.adapter;
  * @author Phillip Webb
  * @see DefaultAdvisorAdapterRegistry
  */
+// 负责拦截器的适配和注册过程
+// 起到适配器和单利模式的作用
 public final class GlobalAdvisorAdapterRegistry {
 
 	private GlobalAdvisorAdapterRegistry() {
@@ -33,6 +35,7 @@ public final class GlobalAdvisorAdapterRegistry {
 	/**
 	 * Keep track of a single instance so we can return it to classes that request it.
 	 */
+	// 提供 DefaultAdvisorAdapterRegistry 类来完成各种通知的适配和注册过程
 	private static AdvisorAdapterRegistry instance = new DefaultAdvisorAdapterRegistry();
 
 	/**
