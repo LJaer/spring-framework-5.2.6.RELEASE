@@ -30,6 +30,7 @@ public class AnnotationTestBeanFactory implements FactoryBean<FactoryCreatedAnno
 		this.instance.setName("FACTORY");
 	}
 
+	//AnnotationTestBeanFactory 产生 Bean 实例对象的实现
 	@Override
 	public FactoryCreatedAnnotationTestBean getObject() throws Exception {
 		return this.instance;
